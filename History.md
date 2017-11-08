@@ -1,4 +1,7 @@
 # History
+## 1.4.1 / 2017-11-2
+. feat. support setting endpoint 
+
 ## 1.3.9 / 2017-09-23
 . Fix: fix the egg controller's error catched by rpc.
 

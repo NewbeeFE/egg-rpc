@@ -88,9 +88,20 @@ axios.post('http://localhost:7001/rpc.endpoint', {
   });
 ```
 
+
+#### 配置
+
+``` js 
+// config/config.default.js
+
+config.eggRpc = {
+  endpoint:'rpc.endpoint' // 配置 egg rpc 地址
+}
+```
+
 ## Contributors(1)
 
 Ordered by date of first contribution.
 
-- [![](https://work.alibaba-inc.com/photo/131354.20x20.jpg)@国勇](http://ygyblog.com) 
+- [![](https://avatars0.githubusercontent.com/u/3305041?s=40&v=4)@国勇](http://ygyblog.com) 
  

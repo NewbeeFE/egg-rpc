@@ -5,7 +5,7 @@ const constant = require('../../lib/constant');
 
 module.exports = () => {
   return function* (next) { 
-    if (this.request.url !== constant.RPC_URL) {
+    if (this.request.url !== this.app.config.eggRpc.endpoint) {
       yield next;
     } else {
       try {

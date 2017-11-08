@@ -1,6 +1,6 @@
 {
   "name": "egg-rpc",
-  "version": "1.4.0",
+  "version": "1.4.5",
   "description": "egg rpc server.",
   "main": "index.js",
   "eggPlugin": {
