@@ -68,6 +68,7 @@ module.exports = Operation;
 ### rpc 方法
 
 每个方法都由三部份组成，方法名、输入、输出。
+
 1.方法名：根据你的业务规则定义方法名。
 
 2.输入：通过 es6 的[解构](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)传值。
