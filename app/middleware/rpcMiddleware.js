@@ -1,10 +1,9 @@
 'use strict';
 
 const rpcErrorCode = require('../../lib/rpc_error_code');
-const constant = require('../../lib/constant');
 
 module.exports = () => {
-  return function* (next) { 
+  return function* (next) {
     if (this.request.url !== this.app.config.eggRpc.endpoint) {
       yield next;
     } else {
