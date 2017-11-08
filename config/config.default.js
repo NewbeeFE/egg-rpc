@@ -7,11 +7,14 @@ module.exports = () => {
     csrf: {
       ignoreJSON: true,
     },
-  }; 
+  };
 
   config.eggRpc = {
-    endpoint: '/rpc.endpoint'
+    rpcDir: 'app/rpc',
+    endpoint: '/rpc.endpoint',
+    enableVersion: false,
+    versionDirMapping: {}
   };
-  
+
   return config;
 };

@@ -21,6 +21,7 @@ exports.eggRpc = {
 ``` 
 
 #### 配置
+
 ``` js 
 // app/config/config.default.js
 
@@ -28,9 +29,22 @@ config.eggRpc = {
   /* 配置 egg rpc 地址,
    * 可省略，默认为 rpc.endpoint，请注意网址前不要少了 /
    */ 
-  endpoint:'/rpc.endpoint' 
+  endpoint:'/rpc.endpoint', 
+  // 是否启用版本控制 
+  enableVersion: false,
+  // 当启用了版本控制时，此属性用于配置每个版本对应的路径
+  versionDirMapping: {
+    /*
+     * key: url 地址，如访问此版本的地址为: http://localhost/rpc.endpoint/v1
+     * value: 文件夹的地址，必须放在 rpc 目录下
+    */
+    v1:'v1'
+  }
 }
+
 ```
+
+
 
 开启插件后，RPC 会暴露一个 http 地址，格式为：http://egg程序地址/指定的rpc地址 ,如 http://localhost:7001/rpc.endpoint.
 

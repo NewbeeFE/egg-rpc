@@ -4,9 +4,7 @@ const rpcErrorCode = require('../../lib/rpc_error_code');
 
 module.exports = () => {
   return function* (next) {
-    if (this.request.url !== this.app.config.eggRpc.endpoint) {
-      yield next;
-    } else {
+    if (this.request.url.indexOf(this.app.config.eggRpc.endpoint) === 0) {
       try {
         yield next;
       } catch (err) {
@@ -23,6 +21,8 @@ module.exports = () => {
 
         this.rpc.throw(err, error.code, error.message);
       }
+    } else {
+      yield next;
     }
   };
 };
