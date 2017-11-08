@@ -74,7 +74,9 @@ module.exports = Operation;
 3.输出：调用继承的 RPC 类提供的三个方法：
 
 `this.success(result)`：成功返回到客户端 。
+
 `this.fail(code, message, data)` 返回失败到客户端，code 为错误码，message 为返回错误的信息, data 用于告诉客户端具体的错误信息。
+
 `this.throw(err, code, message)` 返回异常到客户端，error 为 javascript Error 对象，code 为错误码，message 为返回错误的信息。
 
 #### 在方法体内调用 service
